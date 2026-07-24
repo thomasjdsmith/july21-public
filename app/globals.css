@@ -1,26 +1,56 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #03202f;
+  --foreground: #f2fbff;
+  --surf: #5fd0ee;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-surf: var(--surf);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Keeps the pool image readable behind type: dark at the edges, open in
+   the middle where the caustics are. */
+.pool-scrim {
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(3, 32, 47, 0.82) 0%,
+      rgba(3, 32, 47, 0.5) 42%,
+      rgba(3, 32, 47, 0.94) 100%
+    ),
+    linear-gradient(
+      to right,
+      rgba(3, 32, 47, 0.7) 0%,
+      rgba(3, 32, 47, 0.15) 55%,
+      rgba(3, 32, 47, 0.55) 100%
+    );
+}
+
+/* Slow tidal drift so the water never reads as a flat backdrop. */
+@media (prefers-reduced-motion: no-preference) {
+  .pool-drift {
+    animation: drift 32s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes drift {
+  from {
+    transform: scale(1.06) translate3d(-1%, -0.6%, 0);
+  }
+  to {
+    transform: scale(1.14) translate3d(1%, 0.6%, 0);
+  }
 }
