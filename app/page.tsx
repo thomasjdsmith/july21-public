@@ -43,7 +43,7 @@ export default function Home() {
         <div className="relative flex flex-1 flex-col px-6 py-8 sm:px-10 lg:px-16">
           <header className="flex items-center justify-between">
             <span className="text-lg font-black uppercase tracking-[0.18em]">
-              Aqualingua
+              Aquasteps
             </span>
             <nav className="hidden gap-10 font-mono text-[11px] uppercase tracking-[0.22em] text-white/70 md:flex">
               {nav.map((item) => (
@@ -62,7 +62,7 @@ export default function Home() {
 
           <main className="flex flex-1 flex-col justify-center py-20">
             <p className="font-mono text-[11px] uppercase tracking-[0.34em] text-white/75">
-              Instructor training institute — est. 2014
+              Instructor training institute — est. 2026
             </p>
             <h1 className="mt-7 max-w-5xl text-balance text-5xl font-black uppercase leading-[0.88] tracking-[-0.035em] sm:text-7xl lg:text-8xl">
               Teach the language of the water
