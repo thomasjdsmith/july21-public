@@ -71,7 +71,7 @@ export default function Home() {
               A twelve-week certification for aquatic instructors teaching in a
               language their learners are still acquiring.{" "}
               <span className="font-semibold text-white">
-                We train instructors. We do not run swim classes.
+                We train instructors and license mobile apps. We do not run swim classes nor provide life saving instruction.
               </span>
             </p>
 
