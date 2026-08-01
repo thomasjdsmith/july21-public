@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const nav = ["Method", "Curriculum", "Cohorts", "Faculty"];
 
@@ -149,9 +150,12 @@ export default function Home() {
             Request the syllabus
           </a>
         </div>
-        <p className="mt-16 font-mono text-[11px] uppercase tracking-[0.22em] text-white/45">
-          Aqualingua Institute — instructor certification only
-        </p>
+        <div className="mt-16 flex flex-col gap-3 font-mono text-[11px] uppercase tracking-[0.22em] text-white/45 sm:flex-row sm:items-center sm:justify-between">
+          <p>Aqualingua Institute — instructor certification only</p>
+          <Link href="/privacy-policy" className="hover:text-white">
+            Privacy Policy
+          </Link>
+        </div>
       </footer>
     </div>
   );
